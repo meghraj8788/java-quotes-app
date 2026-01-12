@@ -1,11 +1,5 @@
 # Use the official OpenJDK 17 image as the base image
-FROM openjdk:17-jdk-alpine
-
-# Set metadata
-LABEL maintainer="trainwithshubham@gmail.com"
-LABEL version="1.0"
-LABEL description="A Java Quotes application"
-
+FROM eclipse-temurin:17-jdk-alpine
 # Set the working directory inside the container
 WORKDIR /app
 

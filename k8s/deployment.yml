@@ -1,0 +1,23 @@
+kind: Deployment
+apiVersion: apps/v1
+
+metadata:
+  name: java-app-deployment
+  namespace: java-app-ns
+
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: java-app
+
+  template:
+    metadata:
+      labels:
+        app: java-app
+    spec:
+      containers:
+        - name: java-app-con
+          image: meghrajfand8788/java-app:latest
+          ports:
+            - containerPort: 8000

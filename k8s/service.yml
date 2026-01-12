@@ -1,0 +1,13 @@
+kind: Service
+apiVersion: v1
+
+metadata:
+  name: java-app-svc
+  namespace: java-app-ns
+
+spec:
+  selector:
+    app: java-app
+  ports:
+  - port: 8000
+    targetPort: 8000
